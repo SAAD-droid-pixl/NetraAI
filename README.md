@@ -1,4 +1,4 @@
-[NetraAI Banner](/design/NetraAI.png)
+![NetraAI Banner](./design/A_digital_graphic_design_banner_for_NetraAI_featur.png)
 
 # NetraAI: Redefining Human-Machine Knowledge Access
 
@@ -24,10 +24,10 @@ Design a wearable AI assistant that listens, observes, and assists in real time 
 - Output Layer: Voice + AR overlay
 
 ## 📂 Files and Structure (Proposed)
-- [`src/ai_core/`]()
-- [`docs/`]()
-- [`design/`]()
-- [`demo/`]()
+- [`src/ai_core/`](https://github.com/your-username/NetraAI/tree/main/src/ai_core)
+- [`docs/`](https://github.com/your-username/NetraAI/tree/main/docs)
+- [`design/`](https://github.com/your-username/NetraAI/tree/main/design)
+- [`demo/`](https://github.com/your-username/NetraAI/tree/main/demo)
 
 ## 🚀 Roadmap
 - V1: README, architecture
