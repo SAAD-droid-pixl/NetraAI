@@ -1,0 +1,6 @@
+NetraAI AR Glasses - Concept Design
+
+- Wide-angle front camera
+- Bone-conduction speaker
+- OLED mini projector
+- Edge AI chip (modular)
