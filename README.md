@@ -1,6 +1,6 @@
 # NetraAI
 
-![NetraAI Banner](https://github.com/SAAD-droid-pixl/NetraAI/blob/main/design/A_digital_graphic_design_banner_for_NetraAI_featur.png?raw=true)
+![NetraAI Banner](Design/A_digital_graphic_design_banner_for_NetraAI_featur.png)
 
 > **Empowering Human Intelligence through Wearable AI.**
 
