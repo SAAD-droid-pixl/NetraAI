@@ -1,4 +1,4 @@
-![NetraAI ![NetraAI Banner](NetraAI/design/NetraAI.png)
+[NetraAI Banner](/design/NetraAI.png)
 
 # NetraAI: Redefining Human-Machine Knowledge Access
 
