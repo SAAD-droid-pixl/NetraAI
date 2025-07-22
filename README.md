@@ -1,4 +1,4 @@
-![NetraAI Banner](design/A_digital_graphic_design_banner_for_NetraAI_featur.png)
+![NetraAI Banner](https://github.com/SAAD-droid-pixl/NetraAI/blob/main/design/A_digital_graphic_design_banner_for_NetraAI_featur.png?raw=true)
 
 # NetraAI: Redefining Human-Machine Knowledge Access
 
