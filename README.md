@@ -1,4 +1,4 @@
-![NetraAI Banner](NetaAI/design/A_digital_graphic_design_banner_for_NetraAI_featur.png)
+![NetraAI Banner](design/A_digital_graphic_design_banner_for_NetraAI_featur.png)
 
 # NetraAI: Redefining Human-Machine Knowledge Access
 
