@@ -1,1 +1,6 @@
 
+Demo Ideas:
+
+- Urban AR assistant
+- Cooking suggestion AI
+- Learning companion mode
