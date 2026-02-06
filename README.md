@@ -20,10 +20,10 @@ NetraAI is not just a device — it's a paradigm shift. Our goal is to build a l
 
 | Folder | Description |
 |--------|-------------|
-| [`src/`](./src) | Core AI logic, prompt engine, context handlers |
-| [`docs/`](./docs) | Vision documents, whitepapers |
-| [`design/`](./design) | Concept images, hardware layout |
-| [`demo/`](./demo) | Mockups, prototype videos, demos |
+ [`Src/`](./Src) | Core AI logic, prompt engine, context handlers |
+| [`Docs/`](./Docs) | Vision documents, whitepapers |
+| [`Design/`](./Design) | Concept images, hardware layout |
+| [`Demo/`](./Demo) | Mockups, prototype videos, demos |
 
 ---
 
