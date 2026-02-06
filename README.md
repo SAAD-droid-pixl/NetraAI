@@ -1,4 +1,3 @@
-# HELLO EVERYONE I'M SAAD
 # NetraAI
 
 ![NetraAI Banner](Design/A_digital_graphic_design_banner_for_NetraAI_featur.png)
