@@ -1,6 +1,128 @@
-NetraAI AR Glasses - Concept Design
+NetraAI AR Glasses – Hardware Sketch (Single File)
 
-- Wide-angle front camera
-- Bone-conduction speaker
-- OLED mini projector
-- Edge AI chip (modular)
+Purpose:
+This file provides a simple, readable hardware sketch of NetraAI AR Glasses.
+It explains component placement, data flow, and power logic in a single view.
+
+---
+
+PHYSICAL LAYOUT (SIDE VIEW – SIMPLIFIED ASCII SKETCH)
+
+```
+      [ Wide-Angle Camera ]
+               |
+               v
+    ---------------------------------
+   |   OLED Mini Projector / HUD     |  ---> AR Overlay (Right Eye)
+    ---------------------------------
+               |
+               v
+    ---------------------------------
+   |        Edge AI Chip (Modular)   |
+   |  (Vision + Intent + Context)   |
+    ---------------------------------
+        |                     |
+        |                     |
+        v                     v
+```
+
+[ Bone-Conduction Speaker ]   [ Secure Memory Module ]
+(Audio Output)              (Encrypted User Context)
+|
+v
+---------------------------------
+|        Power + Battery Unit     |
+|   (Frame / Temple Mounted)     |
+---------------------------------
+
+---
+
+COMPONENT BREAKDOWN
+
+1. Wide-Angle Front Camera
+
+* Mounted at the front frame
+* Captures real-world scene
+* Feeds visual data to Edge AI chip
+* No continuous recording by default
+
+2. OLED Mini Projector (AR HUD)
+
+* Projects minimal information into user’s field of view
+* Low brightness, high contrast
+* Only essential overlays (text, arrows, labels)
+
+3. Edge AI Chip (Modular Brain)
+
+* Core processing unit
+* Handles:
+
+  * Object detection
+  * Scene context
+  * Intent recognition
+  * Prompt routing
+* Modular design allows future upgrades
+
+4. Bone-Conduction Speaker
+
+* Mounted in temple arm
+* Transfers sound through bone vibration
+* Keeps ears open for environmental awareness
+
+5. Secure Memory Module
+
+* Stores encrypted personal context
+* Local-only by default
+* User-controlled data access
+
+6. Power & Battery Unit
+
+* Distributed along frame arms
+* Optimized for balance and comfort
+* Supports quick sleep / wake cycles
+
+---
+
+DATA FLOW (LOGICAL)
+
+Camera Input
+↓
+Vision Context Engine
+↓
+Intent + Pattern Detection
+↓
+Prompt / Context Engine
+↓
+Response Decision
+↓
+AR Display (Visual)  OR  Bone-Conduction (Audio)
+
+---
+
+HYBRID PROCESSING MODEL
+
+ON-DEVICE (Default):
+
+* Vision understanding
+* Intent detection
+* Memory recall
+* Fast responses
+
+OPTIONAL CLOUD (User Approved):
+
+* Heavy reasoning
+* Model updates
+* Knowledge expansion
+
+---
+
+DESIGN GOAL SUMMARY
+
+* Lightweight form factor
+* Minimal heat generation
+* Privacy-first architecture
+* Normal glasses feel
+* Invisible, calm intelligence
+
+This sketch represents NetraAI’s philosophy:
+Technology should assist silently, not dominate the user’s attention.
