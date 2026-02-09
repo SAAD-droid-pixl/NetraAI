@@ -2,45 +2,35 @@ from prompt_engine import PromptEngine
 from pattern_script import detect_intent
 from intent_router import route_intent
 from vision_context import get_vision_context
-from memory_manager import MemoryManager
-from response_formatter import format_for_ar
-
+from execution_manager import decide_execution
+from network_manager import is_internet_available
 
 def run_netra_ai(user_input):
     engine = PromptEngine()
-    memory = MemoryManager()
 
-    # Step 1: Detect intent
     intent_data = detect_intent(user_input)
-
-    # Step 2: Route intent
     mode = route_intent(intent_data)
 
-    # Step 3: Get vision context
     vision_context = get_vision_context()
+    internet = is_internet_available()
 
-    # Step 4: Generate AI response
-    response = engine.generate(user_input, vision_context)
+    # Decide task type
+    task_type = "heavy_reasoning" if mode == "KNOWLEDGE_MODE" else "basic_qa"
 
-    # Step 5: Store memory (if needed)
-    if mode == "MEMORY_MODE":
-        memory.store(user_input)
+    execution = decide_execution(task_type, internet)
 
-    # Step 6: Format for AR display
-    ar_response = format_for_ar(response)
+    response = engine.generate(
+        user_input=f"[{execution}] {user_input}",
+        context=vision_context
+    )
 
     return {
         "mode": mode,
-        "vision_context": vision_context,
-        "response": ar_response
+        "execution_layer": execution,
+        "response": response
     }
 
-
-# --- Test Run ---
 if __name__ == "__main__":
-    user_text = "What is this?"
-    output = run_netra_ai(user_text)
+    output = run_netra_ai("Explain this building")
+    print(output)
 
-    print("Mode:", output["mode"])
-    print("Context:", output["vision_context"])
-    print("AR Response:", output["response"])
