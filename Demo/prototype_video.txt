@@ -1,6 +1,143 @@
+# NetraAI – Prototype Demo Video Script
 
-Demo Ideas:
+Purpose:
+This file defines the concept, flow, and narration outline for NetraAI prototype demo videos.
+It is intended for early-stage demos, GitHub previews, investor pitches, and vision communication.
 
-- Urban AR assistant
-- Cooking suggestion AI
-- Learning companion mode
+---
+
+## DEMO VIDEO OVERVIEW
+
+Video Length: 60–120 seconds
+Format: Conceptual prototype (no real hardware required)
+Style: Clean, futuristic, human-focused
+
+The demo shows how NetraAI AR Glasses assist a user in real life without distraction.
+
+---
+
+## SCENE 1 – INTRO (5–10 seconds)
+
+Visual:
+A person puts on normal-looking AR glasses.
+No flashy UI, no heavy design.
+
+Text / Voiceover:
+"What if knowledge appeared exactly when you needed it?"
+
+Purpose:
+Introduce NetraAI as invisible, wearable intelligence.
+
+---
+
+## SCENE 2 – URBAN AR ASSISTANT
+
+Visual:
+User walking in a city.
+Camera POV shows buildings, signboards, streets.
+
+AR Overlay:
+
+* Direction arrow
+* Building name
+* Distance indicator
+
+Audio (Bone Conduction):
+"Turn left in 20 meters. This building is the City Library."
+
+System Flow (Behind the Scenes):
+Camera → Vision Context → Intent Detection → AR + Audio
+
+Purpose:
+Demonstrate navigation and contextual awareness.
+
+---
+
+## SCENE 3 – LEARNING COMPANION MODE
+
+Visual:
+User looking at a machine, book, or object.
+
+AR Overlay:
+
+* Object name
+* Short explanation (1–2 lines)
+
+Audio:
+"This is a DC motor. It converts electrical energy into mechanical energy."
+
+Purpose:
+Show learning without stopping work or opening a phone.
+
+---
+
+## SCENE 4 – COOKING ASSISTANT
+
+Visual:
+User in kitchen looking at vegetables and utensils.
+
+AR Overlay:
+
+* Ingredient names
+* Step indicator
+
+Audio:
+"You can make vegetable stir fry. Step one: heat oil in the pan."
+
+Purpose:
+Show practical everyday assistance.
+
+---
+
+## SCENE 5 – PRIVACY & EDGE AI MOMENT
+
+Visual:
+Minimal animation showing:
+
+* Device processing locally
+* Lock icon on memory module
+
+Text:
+"Your data stays with you."
+"No always-on cloud."
+
+Purpose:
+Highlight privacy-first architecture.
+
+---
+
+## SCENE 6 – HYBRID INTELLIGENCE
+
+Visual:
+Simple diagram animation:
+Device ↔ Optional Cloud
+
+Text:
+"Offline when needed. Online when useful."
+
+Purpose:
+Explain hybrid AI model in simple terms.
+
+---
+
+## SCENE 7 – OUTRO / VISION
+
+Visual:
+User removes glasses.
+Normal life continues.
+
+Voiceover:
+"NetraAI doesn’t replace human intelligence. It empowers it."
+
+Text on Screen:
+NetraAI – Empowering Humans with Seamless Access to Knowledge
+
+---
+
+## END NOTE
+
+This prototype demo is conceptual.
+It represents the vision, user experience, and system flow of NetraAI.
+
+The goal is clarity, not complexity.
+Technology should feel calm, helpful, and human.
