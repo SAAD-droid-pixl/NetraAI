@@ -1,4 +1,4 @@
-# NetraAI
+## NetraAI
 
 ![NetraAI Banner](Design/A_digital_graphic_design_banner_for_NetraAI_featur.png)
 
@@ -15,7 +15,7 @@ Empowering Human Intelligence through Wearable AI
 
 ---
 
-🌍 Vision
+## 🌍 Vision
 
 NetraAI is not just a device — it is a paradigm shift in human-technology interaction.
 
@@ -45,7 +45,7 @@ This is about layering intelligence into reality.
 
 ---
 
-🧭 Core Philosophy
+## 🧭 Core Philosophy
 
 1️⃣ Human-First Interaction
 
@@ -66,7 +66,7 @@ Optional cloud — never mandatory.
 
 ---
 
-🚀 What Makes NetraAI Different
+## 🚀 What Makes NetraAI Different
 
 Most smart glasses focus on:
 
@@ -101,7 +101,7 @@ It combines:
 
 ---
 
-🧩 Features (Current + Future Vision)
+# 🧩 Features (Current + Future Vision)
 
 🥽 Augmented Reality Glasses
 
@@ -126,7 +126,7 @@ Encrypted local storage. User-controlled data ownership.
 
 ---
 
-🌌 Future Innovation Modules (Breakthrough Vision)
+## 🌌 Future Innovation Modules (Breakthrough Vision)
 
 1️⃣ Predictive Context Engine
 
@@ -165,7 +165,7 @@ Human-state aware decision support.
 
 ---
 
-🏗️ Updated Architecture Overview
+## 🏗️ Updated Architecture Overview
 
 Sensors Layer
 (Camera + Audio + Motion)
@@ -187,7 +187,6 @@ Optional: Secure Cloud Boost Layer
 
 ---
 
-📂 Project Structure
 ## 📁 Project Structure
 
 | Folder | Description |
@@ -226,7 +225,7 @@ NetraAI/
 
 ---
 
-🛠️ Installation (Developers)
+## 🛠️ Installation (Developers)
 
 git clone https://github.com/SAAD-droid-pixl/NetraAI.git
 cd NetraAI
@@ -236,7 +235,7 @@ Explore modules and contribute to the intelligence layer.
 
 ---
 
-🎯 Long-Term Positioning
+## 🎯 Long-Term Positioning
 
 Company	Focus
 
@@ -255,20 +254,8 @@ NetraAI Focus:
 
 ---
 
-🤝 Join the Vision
-
 This is not just about building smart glasses.
 It is about redefining how humans interact with knowledge.
-
-> “जो देख सकता है वो बना सकता है।”
-
-
-
-If you can imagine it, you can help create it.
-Be part of the NetraAI evolution.
-
-
----  
 
 ---
 
