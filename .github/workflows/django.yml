@@ -28,7 +28,7 @@ jobs:
       - name: Cache pip dependencies
         uses: actions/cache@v4
         with:
-          python-version: '8.0'
+          python-version: '3.11'
           path: |
             ~/.cache/pip
             ~\AppData\Local\pip\Cache
