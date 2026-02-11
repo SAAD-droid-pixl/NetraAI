@@ -1,1 +1,20 @@
+# ===== Core Utilities =====
+requests>=2.31.0
+python-dotenv>=1.0.0
 
+# ===== AI / LLM (Cloud + Local Ready) =====
+openai>=1.0.0
+transformers>=4.36.0
+torch>=2.0.0
+
+# ===== Vision Processing =====
+opencv-python>=4.8.0
+Pillow>=10.0.0
+pytesseract>=0.3.10
+
+# ===== Privacy & Security =====
+cryptography>=41.0.0
+
+# ===== Audio (Future Voice Mode) =====
+SpeechRecognition>=3.10.0
+pyttsx3>=2.90
