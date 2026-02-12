@@ -18,3 +18,6 @@ cryptography>=41.0.0
 # ===== Audio (Future Voice Mode) =====
 SpeechRecognition>=3.10.0
 pyttsx3>=2.90
+fastapi
+uvicorn
+jinja2
