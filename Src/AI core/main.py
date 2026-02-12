@@ -1,36 +1,18 @@
-from prompt_engine import PromptEngine
-from pattern_script import detect_intent
-from intent_router import route_intent
-from vision_context import get_vision_context
-from execution_manager import decide_execution
-from network_manager import is_internet_available
+from vision_context import analyze_vision
+from intent_router import detect_intent
+from predictive_engine import predict
+from memory_manager import store_memory
+from execution_manager import execute
 
-def run_netra_ai(user_input):
-    engine = PromptEngine()
 
-    intent_data = detect_intent(user_input)
-    mode = route_intent(intent_data)
+def run_simulation(mode: str, user_input: str):
 
-    vision_context = get_vision_context()
-    internet = is_internet_available()
+    vision_data = analyze_vision(mode)
+    intent = detect_intent(user_input)
+    prediction = predict(vision_data)
 
-    # Decide task type
-    task_type = "heavy_reasoning" if mode == "KNOWLEDGE_MODE" else "basic_qa"
+    result = execute(intent, vision_data, prediction)
 
-    execution = decide_execution(task_type, internet)
+    store_memory(user_input, result)
 
-    response = engine.generate(
-        user_input=f"[{execution}] {user_input}",
-        context=vision_context
-    )
-
-    return {
-        "mode": mode,
-        "execution_layer": execution,
-        "response": response
-    }
-
-if __name__ == "__main__":
-    output = run_netra_ai("Explain this building")
-    print(output)
-
+    return result
