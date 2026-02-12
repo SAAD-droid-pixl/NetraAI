@@ -1,35 +1,38 @@
-name: NetraAI Stable CI
+name: Python CI
 
 on:
   push:
-    branches: ["main"]
+    branches: [main]
   pull_request:
-    branches: ["main"]
+    branches: [main]
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+        python-version: ["3.10", "3.11", "3.12"]
 
     steps:
-      - name: 📥 Checkout Repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: 🐍 Setup Python (Latest Stable)
+      - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v5
         with:
-          python-version: "3.x"
+          python-version: ${{ matrix.python-version }}
+          cache: 'pip'
 
-      - name: ⚙️ Upgrade pip and core tools
+      - name: Install dependencies
         run: |
-          python -m pip install --upgrade pip setuptools wheel
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
-      - name: 📦 Install Dependencies (if requirements.txt exists)
-        run: |
-          if [ -f requirements.txt ]; then
-            pip install -r requirements.txt
-          else
-            echo "No requirements.txt found → skipping dependency installation"
-          fi
+      - name: Compile check
+        run: python -m compileall Src
+
+      # बाकी तुम्हारे steps जैसे simulation test, FastAPI test आदि
 
       - name: 🧠 Python Syntax & Compile Check (Strict)
         run: |
