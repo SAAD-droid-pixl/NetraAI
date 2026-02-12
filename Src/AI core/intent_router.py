@@ -1,15 +1,14 @@
-def route_intent(intent_data):
-    """
-    Routes detected intent to system mode
-    """
-    intents = intent_data.get("intents", ["unknown"])
-    intent = intents[0]
+def detect_intent(user_input: str):
+    text = user_input.lower()
 
-    if intent == "information":
-        return "KNOWLEDGE_MODE"
-    elif intent == "reminder":
-        return "MEMORY_MODE"
-    elif intent == "greeting":
-        return "SOCIAL_MODE"
+    if "what" in text or "explain" in text:
+        return "explanation"
+
+    elif "help" in text:
+        return "assistance"
+
+    elif "next" in text or "predict" in text:
+        return "prediction"
+
     else:
-        return "DEFAULT_MODE"
+        return "general_query"
