@@ -1,15 +1,10 @@
-class MemoryManager:
-    def __init__(self):
-        self.memory = []
+memory_log = []
 
-    def store(self, item):
-        """
-        Store a memory item
-        """
-        self.memory.append(item)
+def store_memory(user_input: str, result: str):
+    memory_log.append({
+        "input": user_input,
+        "result": result
+    })
 
-    def recall(self, limit=3):
-        """
-        Recall last N memory items
-        """
-        return self.memory[-limit:]
+def get_memory():
+    return memory_log
