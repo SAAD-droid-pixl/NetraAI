@@ -19,22 +19,61 @@ jobs:
         with:
           python-version: "3.x"
 
-      - name: ⚙️ Upgrade Core Tools
+      - name: ⚙️ Upgrade pip and core tools
         run: |
           python -m pip install --upgrade pip setuptools wheel
 
-      - name: 📦 Install Dependencies (Safe Mode)
+      - name: 📦 Install Dependencies (if requirements.txt exists)
         run: |
-          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+          if [ -f requirements.txt ]; then
+            pip install -r requirements.txt
+          else
+            echo "No requirements.txt found → skipping dependency installation"
+          fi
 
-      - name: 🧠 Compile Check
+      - name: 🧠 Python Syntax & Compile Check (Strict)
         run: |
-          python -m compileall Src
+          python -m compileall -q -f Src
+          # -q = quiet, -f = force recompile
+          # अगर कोई syntax error होगा तो step fail हो जाएगा
 
-      - name: 🚀 Test Simulation Engine
+      - name: 🚀 Test Simulation Engine (Fixed Import Path)
         run: |
-          python -c "import sys; sys.path.append('Src'); from main import run_simulation; print(run_simulation('urban','test'))"
+          PYTHONPATH=Src:$PYTHONPATH python -c "
+          try:
+              from AI_core.main import run_simulation
+              result = run_simulation('urban', 'test')
+              print('Simulation ran successfully!')
+              print('Output:', result)
+          except ImportError as e:
+              print('Import failed:', str(e))
+              raise
+          except Exception as e:
+              print('Simulation failed:', str(e))
+              raise
+          "
 
-      - name: 🌐 FastAPI Load Test
+      - name: 🌐 FastAPI App Load Test
         run: |
-          python -c "from web_demo.app import app; print('FastAPI loaded')"
+          PYTHONPATH=Src:$PYTHONPATH python -c "
+          try:
+              from web_demo.app import app
+              print('FastAPI app imported successfully!')
+              print('App title:', getattr(app, 'title', 'No title set'))
+          except ImportError as e:
+              print('FastAPI import failed:', str(e))
+              raise
+          except Exception as e:
+              print('FastAPI load error:', str(e))
+              raise
+          "
+
+      # Optional: अगर तुम्हें linting चाहिए (flake8/black आदि)
+      # - name: 🔍 Code Style Check
+      #   run: |
+      #     pip install flake8
+      #     flake8 Src --count --select=E9,F63,F7,F82 --show-source --statistics
+
+      - name: 🧹 Post-job Cleanup (optional)
+        if: always()
+        run: echo "CI job completed. Status: ${{ job.status }}"
