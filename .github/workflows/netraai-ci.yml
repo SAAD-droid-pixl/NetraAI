@@ -1,0 +1,43 @@
+name: NetraAI CI Pipeline
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        python-version: ["3.10", "3.11", "3.12"]
+
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - name: 📥 Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: 🐍 Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: 📦 Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: 🧠 Check Core Compilation
+        run: |
+          python -m compileall Src
+
+      - name: 🚀 Test Simulation Engine
+        run: |
+          python -c "import sys; sys.path.append('Src'); from main import run_simulation; print(run_simulation('urban','what is happening?'))"
+
+      - name: 🌐 Validate FastAPI Import
+        run: |
+          python -c "from web_demo.app import app; print('FastAPI app loaded successfully')"
