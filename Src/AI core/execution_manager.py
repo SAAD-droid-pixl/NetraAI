@@ -1,10 +1,8 @@
-def decide_execution(task_type, internet_available=True):
-    """
-    Decide where to process the task
-    """
-    if task_type == "heavy_reasoning" and internet_available:
-        return "CLOUD"
-    elif task_type in ["vision", "basic_qa"]:
-        return "LOCAL"
-    else:
-        return "EDGE"
+def execute(intent: str, vision_data: dict, prediction: str):
+
+    return (
+        f"🧠 Intent: {intent}\n"
+        f"👁 Environment: {vision_data.get('environment')}\n"
+        f"🎯 Detected: {vision_data.get('object_detected')}\n"
+        f"🔮 Prediction: {prediction}"
+    )
