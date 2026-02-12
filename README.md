@@ -259,6 +259,14 @@ It is about redefining how humans interact with knowledge.
 
 ---
 
+## 🌐 Live Demo
+
+Click below to experience NetraAI live:
+
+👉 https://netraai.onrender.com
+
+----
+
 ## 📦 Installation (for developers)
 
 ```bash
